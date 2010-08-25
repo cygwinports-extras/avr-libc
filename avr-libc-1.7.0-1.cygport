@@ -1,0 +1,13 @@
+CROSS_HOST="avr"
+inherit cross
+
+DESCRIPTION="Embedded C library for AVR toolchain"
+HOMEPAGE="http://www.nongnu.org/avr-libc/"
+SRC_URI="mirror://savannah/avr-libc/${P}.tar.bz2"
+PATCH_URI="1.7.0-missing-m3000.patch"
+
+DIFF_EXCLUDES="examples"
+
+CYGCONF_ARGS="--enable-doc --disable-versioned-doc"
+# embedded system; use /usr/$target/{include,lib} instead of sysroot
+MAKEOPTS+=" prefix=/usr datadir=/usr/share"
