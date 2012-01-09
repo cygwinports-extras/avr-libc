@@ -4,7 +4,6 @@ inherit cross
 DESCRIPTION="Embedded C library for AVR toolchain"
 HOMEPAGE="http://www.nongnu.org/avr-libc/"
 SRC_URI="mirror://savannah/avr-libc/${P}.tar.bz2"
-PATCH_URI="1.7.0-missing-m3000.patch"
 
 DIFF_EXCLUDES="examples"
 
