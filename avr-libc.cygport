@@ -1,0 +1,21 @@
+CROSS_HOST="avr"
+inherit cross
+
+NAME="avr-libc"
+VERSION=1.8.0
+RELEASE=2
+CATEGORY="Devel"
+SUMMARY="C library for AVR embedded toolchain"
+DESCRIPTION="AVR Libc is a Free Software project whose goal is to provide a
+high quality C library for use with GCC on Atmel AVR microcontrollers.
+Together, avr-binutils, avr-gcc, and avr-libc form the heart of the Free
+Software toolchain for the Atmel AVR microcontrollers."
+HOMEPAGE="http://www.nongnu.org/avr-libc/"
+SRC_URI="mirror://savannah/avr-libc/${NAME}-${VERSION}.tar.bz2"
+PATCH_URI="http://pkgs.fedoraproject.org/cgit/avr-libc.git/plain/avr-libc-1.6.4-documentation.patch"
+
+DIFF_EXCLUDES="examples"
+
+CYGCONF_ARGS="--enable-doc --disable-versioned-doc"
+# embedded system; use /usr/$target/{include,lib} instead of sysroot
+MAKEOPTS+=" prefix=/usr datadir=/usr/share"

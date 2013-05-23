@@ -1,7 +1,0 @@
-category: Devel
-requires:
-sdesc: "C library for AVR embedded toolchain"
-ldesc: "AVR Libc is a Free Software project whose goal is to provide a 
-high quality C library for use with GCC on Atmel AVR microcontrollers. 
-Together, avr-binutils, avr-gcc, and avr-libc form the heart of the Free 
-Software toolchain for the Atmel AVR microcontrollers."
